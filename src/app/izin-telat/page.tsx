@@ -6,6 +6,12 @@ import { Plus, X, Clock, Upload, Eye, Check, XCircle, ImageIcon, Trash2, AlertTr
 
 type Status = 'pending' | 'disetujui' | 'ditolak'
 
+type TelatEntry = {
+  id: string; karyawan: string; dept: string; tanggal: string;
+  shiftMulai: string; waktuMasuk: string; selisih: string; alasan: string;
+  status: Status; buktiUrl: string | null
+}
+
 const statusStyle: Record<Status, { bg: string; color: string; label: string }> = {
   pending:   { bg: '#FEF9C3', color: '#A16207', label: 'Menunggu' },
   disetujui: { bg: '#DCFCE7', color: '#166534', label: 'Disetujui' },
@@ -20,7 +26,7 @@ const initialData = [
 ]
 
 export default function IzinTelatPage() {
-  const [data, setData]             = useState(initialData)
+  const [data, setData]             = useState<TelatEntry[]>(initialData)
   const [showModal, setShowModal]   = useState(false)
   const [previewImg, setPreviewImg] = useState<string | null>(null)
   const [dragOver, setDragOver]     = useState(false)
