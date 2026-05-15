@@ -1,0 +1,124 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.pnp.mjs
+.yarn/install-state.gz
+
+# Testing
+/coverage
+
+# Next.js build output
+/.next/
+/out/
+
+# Production builds
+/build
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment variables
+.env
+.env*.local
+.env*.development.local
+.env*.test.local
+.env*.production.local
+
+# TypeScript cache
+*.tsbuildinfo
+.next/types/
+
+# Optional: Keep the Next.js types
+!.next/types/**/*.d.ts
+
+# Optional: Keep environment variables files for demo/testing
+!.env.example
+
+# IDE and editors
+.idea
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.bak
+
+# Turbo (if using Turbopack)
+.turbo
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Vercel (if deploying to Vercel)
+.vercel
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+lib-cov
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'next build'
+.next
+
+# Storybook build output
+storybook-static
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency lock files (optional - keep if you want to track them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
