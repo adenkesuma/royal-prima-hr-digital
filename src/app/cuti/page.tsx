@@ -145,8 +145,8 @@ export default function CutiPage() {
                       {row.delegasi || '—'}
                     </td>
                     <td className="px-4 py-3">
-                      {(row as any).buktiUrl ? (
-                        <button onClick={() => setPreviewImg((row as any).buktiUrl)}
+                      {row.buktiUrl ? (
+                        <button onClick={() => setPreviewImg(row.buktiUrl!)}
                           className="flex items-center gap-1 text-xs px-2 py-1 rounded-lg font-medium"
                           style={{ background: '#DCFCE7', color: '#166534' }}>
                           <Eye className="w-3 h-3" /> Lihat

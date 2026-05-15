@@ -41,6 +41,7 @@ export interface Izin {
   status: 'pending' | 'disetujui' | 'ditolak';
   hasSKI?: boolean;
   delegasi?: string;
+  buktiUrl?: string;
   diajukan: string;
 }
 

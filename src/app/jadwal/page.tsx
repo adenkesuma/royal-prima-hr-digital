@@ -24,9 +24,17 @@ export default function JadwalPage() {
     if(!user) return
     const exists = data.find(d=>d.karyawanId===form.karyawanId&&d.tanggal===form.tanggal)
     if(!exists) {
+      const shiftTimes: Record<string,{jamMulai:string,jamSelesai:string}> = {
+        Pagi:  { jamMulai:'07:00', jamSelesai:'14:00' },
+        Siang: { jamMulai:'14:00', jamSelesai:'21:00' },
+        Malam: { jamMulai:'21:00', jamSelesai:'07:00' },
+      }
+      const times = shiftTimes[form.shift] ?? { jamMulai:'07:00', jamSelesai:'14:00' }
       setData(d=>[...d,{
         id:'jd'+Date.now(),karyawanId:form.karyawanId,karyawan:user.nama,
-        departemen:user.departemen,tanggal:form.tanggal,shift:form.shift as any,status:'aktif' as any
+        departemen:user.departemen,tanggal:form.tanggal,
+        shift:form.shift as 'Pagi'|'Siang'|'Malam',
+        jamMulai:times.jamMulai,jamSelesai:times.jamSelesai,lokasi:''
       }])
     }
     setShowModal(false)
