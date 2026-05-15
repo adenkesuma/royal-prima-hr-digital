@@ -130,7 +130,7 @@ export default function Dashboard() {
                     </div>
                     <div>
                       <div className="text-xs font-medium" style={{ color: '#1E293B' }}>{a.karyawan}</div>
-                      <div className="text-xs" style={{ color: '#94A3B8' }}>{a.masuk || '—'}</div>
+                      <div className="text-xs" style={{ color: '#94A3B8' }}>{a.jamMasuk || '—'}</div>
                     </div>
                   </div>
                   {statusBadge(a.status)}
